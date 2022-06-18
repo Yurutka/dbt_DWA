@@ -209,129 +209,144 @@ Q2.1
 12402579373	1996	MFGR#129
 
 Q3.3
-UNITED KI1	UNITED KI5	1992	1178335603
-UNITED KI1	UNITED KI1	1992	1052597356
-UNITED KI5	UNITED KI1	1992	1026260086
-UNITED KI5	UNITED KI5	1992	973349994
-UNITED KI5	UNITED KI5	1993	1083378728
-UNITED KI5	UNITED KI1	1993	1043169947
-UNITED KI1	UNITED KI5	1993	965639669
-UNITED KI1	UNITED KI1	1993	918452812
-UNITED KI5	UNITED KI5	1994	1260730803
-UNITED KI1	UNITED KI5	1994	1081071702
-UNITED KI1	UNITED KI1	1994	1020245194
-UNITED KI5	UNITED KI1	1994	863514969
-UNITED KI1	UNITED KI5	1995	1124054660
-UNITED KI5	UNITED KI5	1995	1068365947
-UNITED KI5	UNITED KI1	1995	1040392678
-UNITED KI1	UNITED KI1	1995	1039336005
-UNITED KI1	UNITED KI5	1996	1062077548
-UNITED KI5	UNITED KI5	1996	958571109
-UNITED KI5	UNITED KI1	1996	940597740
-UNITED KI1	UNITED KI1	1996	874229030
-UNITED KI1	UNITED KI5	1997	1163355766
-UNITED KI1	UNITED KI1	1997	982350529
-UNITED KI5	UNITED KI5	1997	949314641
-UNITED KI5	UNITED KI1	1997	785895247
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<table><tr><th colspan="4">SELECT<br>    C_CITY,<br>    S_CITY,<br>    toYear(LO_ORDERDATE) AS year,<br>    sum(LO_REVENUE) AS revenue<br>FROM lineorder_flat<br>WHERE (C_CITY = 'UNITED KI1' OR C_CITY = 'UNITED KI5') AND (S_CITY = 'UNITED KI1' OR S_CITY = 'UNITED KI5') AND year &gt;= 1992 AND year &lt;= 1997<br>GROUP BY<br>    C_CITY,<br>    S_CITY,<br>    year<br>ORDER BY<br>    year ASC,<br>    revenue DESC</th></tr><tr><th>C_CITY</th><th>S_CITY</th><th>year</th><th>revenue</th></tr><tr class="odd"><td>UNITED KI1</td><td>UNITED KI5</td><td>1 992</td><td>1 178 335 603</td></tr>
+<tr><td>UNITED KI1</td><td>UNITED KI1</td><td>1 992</td><td>1 052 597 356</td></tr>
+<tr class="odd"><td>UNITED KI5</td><td>UNITED KI1</td><td>1 992</td><td>1 026 260 086</td></tr>
+<tr><td>UNITED KI5</td><td>UNITED KI5</td><td>1 992</td><td>973 349 994</td></tr>
+<tr class="odd"><td>UNITED KI5</td><td>UNITED KI5</td><td>1 993</td><td>1 083 378 728</td></tr>
+<tr><td>UNITED KI5</td><td>UNITED KI1</td><td>1 993</td><td>1 043 169 947</td></tr>
+<tr class="odd"><td>UNITED KI1</td><td>UNITED KI5</td><td>1 993</td><td>965 639 669</td></tr>
+<tr><td>UNITED KI1</td><td>UNITED KI1</td><td>1 993</td><td>918 452 812</td></tr>
+<tr class="odd"><td>UNITED KI5</td><td>UNITED KI5</td><td>1 994</td><td>1 260 730 803</td></tr>
+<tr><td>UNITED KI1</td><td>UNITED KI5</td><td>1 994</td><td>1 081 071 702</td></tr>
+<tr class="odd"><td>UNITED KI1</td><td>UNITED KI1</td><td>1 994</td><td>1 020 245 194</td></tr>
+<tr><td>UNITED KI5</td><td>UNITED KI1</td><td>1 994</td><td>863 514 969</td></tr>
+<tr class="odd"><td>UNITED KI1</td><td>UNITED KI5</td><td>1 995</td><td>1 124 054 660</td></tr>
+<tr><td>UNITED KI5</td><td>UNITED KI5</td><td>1 995</td><td>1 068 365 947</td></tr>
+<tr class="odd"><td>UNITED KI5</td><td>UNITED KI1</td><td>1 995</td><td>1 040 392 678</td></tr>
+<tr><td>UNITED KI1</td><td>UNITED KI1</td><td>1 995</td><td>1 039 336 005</td></tr>
+<tr class="odd"><td>UNITED KI1</td><td>UNITED KI5</td><td>1 996</td><td>1 062 077 548</td></tr>
+<tr><td>UNITED KI5</td><td>UNITED KI5</td><td>1 996</td><td>958 571 109</td></tr>
+<tr class="odd"><td>UNITED KI5</td><td>UNITED KI1</td><td>1 996</td><td>940 597 740</td></tr>
+<tr><td>UNITED KI1</td><td>UNITED KI1</td><td>1 996</td><td>874 229 030</td></tr>
+<tr class="odd"><td>UNITED KI1</td><td>UNITED KI5</td><td>1 997</td><td>1 163 355 766</td></tr>
+<tr><td>UNITED KI1</td><td>UNITED KI1</td><td>1 997</td><td>982 350 529</td></tr>
+<tr class="odd"><td>UNITED KI5</td><td>UNITED KI5</td><td>1 997</td><td>949 314 641</td></tr>
+<tr><td>UNITED KI5</td><td>UNITED KI1</td><td>1 997</td><td>785 895 247</td></tr>
+</table></body></html>
+
 
 Q4.2
-1997	ARGENTINA	MFGR#11	20633150130
-1997	ARGENTINA	MFGR#12	20911142211
-1997	ARGENTINA	MFGR#13	20751352336
-1997	ARGENTINA	MFGR#14	20725587334
-1997	ARGENTINA	MFGR#15	20847465627
-1997	ARGENTINA	MFGR#21	20249876951
-1997	ARGENTINA	MFGR#22	21302749143
-1997	ARGENTINA	MFGR#23	20495067091
-1997	ARGENTINA	MFGR#24	20640513738
-1997	ARGENTINA	MFGR#25	20581166907
-1997	BRAZIL	MFGR#11	20336534391
-1997	BRAZIL	MFGR#12	19878221181
-1997	BRAZIL	MFGR#13	19800437055
-1997	BRAZIL	MFGR#14	19931925060
-1997	BRAZIL	MFGR#15	19816491706
-1997	BRAZIL	MFGR#21	19805847607
-1997	BRAZIL	MFGR#22	20195348769
-1997	BRAZIL	MFGR#23	20074204925
-1997	BRAZIL	MFGR#24	19665389566
-1997	BRAZIL	MFGR#25	19802289453
-1997	CANADA	MFGR#11	20993920907
-1997	CANADA	MFGR#12	20788212732
-1997	CANADA	MFGR#13	20582154083
-1997	CANADA	MFGR#14	20362070872
-1997	CANADA	MFGR#15	21019323130
-1997	CANADA	MFGR#21	20628385631
-1997	CANADA	MFGR#22	21051367486
-1997	CANADA	MFGR#23	21246059063
-1997	CANADA	MFGR#24	20899413741
-1997	CANADA	MFGR#25	20371722143
-1997	PERU	MFGR#11	20123262396
-1997	PERU	MFGR#12	20435195199
-1997	PERU	MFGR#13	20644146457
-1997	PERU	MFGR#14	20792194518
-1997	PERU	MFGR#15	20257979054
-1997	PERU	MFGR#21	20161248985
-1997	PERU	MFGR#22	20485090615
-1997	PERU	MFGR#23	20348873210
-1997	PERU	MFGR#24	20678352774
-1997	PERU	MFGR#25	20765819746
-1997	UNITED STATES	MFGR#11	20724850604
-1997	UNITED STATES	MFGR#12	20017511699
-1997	UNITED STATES	MFGR#13	21016131045
-1997	UNITED STATES	MFGR#14	20014491295
-1997	UNITED STATES	MFGR#15	20196560991
-1997	UNITED STATES	MFGR#21	20531748627
-1997	UNITED STATES	MFGR#22	20882575322
-1997	UNITED STATES	MFGR#23	21070136590
-1997	UNITED STATES	MFGR#24	20257501400
-1997	UNITED STATES	MFGR#25	20251954880
-1998	ARGENTINA	MFGR#11	12288150848
-1998	ARGENTINA	MFGR#12	12150903556
-1998	ARGENTINA	MFGR#13	12253619754
-1998	ARGENTINA	MFGR#14	11761221854
-1998	ARGENTINA	MFGR#15	12044241064
-1998	ARGENTINA	MFGR#21	12549693537
-1998	ARGENTINA	MFGR#22	12128760181
-1998	ARGENTINA	MFGR#23	12047927880
-1998	ARGENTINA	MFGR#24	12335758706
-1998	ARGENTINA	MFGR#25	11979080219
-1998	BRAZIL	MFGR#11	11647118611
-1998	BRAZIL	MFGR#12	11765031850
-1998	BRAZIL	MFGR#13	11539651912
-1998	BRAZIL	MFGR#14	11728424691
-1998	BRAZIL	MFGR#15	12047145706
-1998	BRAZIL	MFGR#21	11782460918
-1998	BRAZIL	MFGR#22	11756056270
-1998	BRAZIL	MFGR#23	11547114917
-1998	BRAZIL	MFGR#24	12102760874
-1998	BRAZIL	MFGR#25	12136894531
-1998	CANADA	MFGR#11	12053393754
-1998	CANADA	MFGR#12	12283529601
-1998	CANADA	MFGR#13	12468524366
-1998	CANADA	MFGR#14	12417969344
-1998	CANADA	MFGR#15	12783220814
-1998	CANADA	MFGR#21	11846843793
-1998	CANADA	MFGR#22	12420965086
-1998	CANADA	MFGR#23	11510243336
-1998	CANADA	MFGR#24	12403564192
-1998	CANADA	MFGR#25	12021045203
-1998	PERU	MFGR#11	11920946766
-1998	PERU	MFGR#12	11722265770
-1998	PERU	MFGR#13	11830328247
-1998	PERU	MFGR#14	12277764929
-1998	PERU	MFGR#15	11685309770
-1998	PERU	MFGR#21	11570486758
-1998	PERU	MFGR#22	12064845586
-1998	PERU	MFGR#23	12029816559
-1998	PERU	MFGR#24	11840207053
-1998	PERU	MFGR#25	11605382452
-1998	UNITED STATES	MFGR#11	12111987890
-1998	UNITED STATES	MFGR#12	12153958363
-1998	UNITED STATES	MFGR#13	12111547473
-1998	UNITED STATES	MFGR#14	12164432343
-1998	UNITED STATES	MFGR#15	12163317594
-1998	UNITED STATES	MFGR#21	11771585140
-1998	UNITED STATES	MFGR#22	12426045879
-1998	UNITED STATES	MFGR#23	12062197640
-1998	UNITED STATES	MFGR#24	11953726571
-1998	UNITED STATES	MFGR#25	12263410706
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<table><tr><th colspan="4">SELECT<br>    toYear(LO_ORDERDATE) AS year,<br>    S_NATION,<br>    P_CATEGORY,<br>    sum(LO_REVENUE - LO_SUPPLYCOST) AS profit<br>FROM lineorder_flat<br>WHERE C_REGION = 'AMERICA' AND S_REGION = 'AMERICA' AND (year = 1997 OR year = 1998) AND (P_MFGR = 'MFGR#1' OR P_MFGR = 'MFGR#2')<br>GROUP BY<br>    year,<br>    S_NATION,<br>    P_CATEGORY<br>ORDER BY<br>    year ASC,<br>    S_NATION ASC,<br>    P_CATEGORY ASC</th></tr><tr><th>year</th><th>S_NATION</th><th>P_CATEGORY</th><th>profit</th></tr><tr class="odd"><td>1 997</td><td>ARGENTINA</td><td>MFGR#11</td><td>20 633 150 130</td></tr>
+<tr><td>1 997</td><td>ARGENTINA</td><td>MFGR#12</td><td>20 911 142 211</td></tr>
+<tr class="odd"><td>1 997</td><td>ARGENTINA</td><td>MFGR#13</td><td>20 751 352 336</td></tr>
+<tr><td>1 997</td><td>ARGENTINA</td><td>MFGR#14</td><td>20 725 587 334</td></tr>
+<tr class="odd"><td>1 997</td><td>ARGENTINA</td><td>MFGR#15</td><td>20 847 465 627</td></tr>
+<tr><td>1 997</td><td>ARGENTINA</td><td>MFGR#21</td><td>20 249 876 951</td></tr>
+<tr class="odd"><td>1 997</td><td>ARGENTINA</td><td>MFGR#22</td><td>21 302 749 143</td></tr>
+<tr><td>1 997</td><td>ARGENTINA</td><td>MFGR#23</td><td>20 495 067 091</td></tr>
+<tr class="odd"><td>1 997</td><td>ARGENTINA</td><td>MFGR#24</td><td>20 640 513 738</td></tr>
+<tr><td>1 997</td><td>ARGENTINA</td><td>MFGR#25</td><td>20 581 166 907</td></tr>
+<tr class="odd"><td>1 997</td><td>BRAZIL</td><td>MFGR#11</td><td>20 336 534 391</td></tr>
+<tr><td>1 997</td><td>BRAZIL</td><td>MFGR#12</td><td>19 878 221 181</td></tr>
+<tr class="odd"><td>1 997</td><td>BRAZIL</td><td>MFGR#13</td><td>19 800 437 055</td></tr>
+<tr><td>1 997</td><td>BRAZIL</td><td>MFGR#14</td><td>19 931 925 060</td></tr>
+<tr class="odd"><td>1 997</td><td>BRAZIL</td><td>MFGR#15</td><td>19 816 491 706</td></tr>
+<tr><td>1 997</td><td>BRAZIL</td><td>MFGR#21</td><td>19 805 847 607</td></tr>
+<tr class="odd"><td>1 997</td><td>BRAZIL</td><td>MFGR#22</td><td>20 195 348 769</td></tr>
+<tr><td>1 997</td><td>BRAZIL</td><td>MFGR#23</td><td>20 074 204 925</td></tr>
+<tr class="odd"><td>1 997</td><td>BRAZIL</td><td>MFGR#24</td><td>19 665 389 566</td></tr>
+<tr><td>1 997</td><td>BRAZIL</td><td>MFGR#25</td><td>19 802 289 453</td></tr>
+<tr class="odd"><td>1 997</td><td>CANADA</td><td>MFGR#11</td><td>20 993 920 907</td></tr>
+<tr><td>1 997</td><td>CANADA</td><td>MFGR#12</td><td>20 788 212 732</td></tr>
+<tr class="odd"><td>1 997</td><td>CANADA</td><td>MFGR#13</td><td>20 582 154 083</td></tr>
+<tr><td>1 997</td><td>CANADA</td><td>MFGR#14</td><td>20 362 070 872</td></tr>
+<tr class="odd"><td>1 997</td><td>CANADA</td><td>MFGR#15</td><td>21 019 323 130</td></tr>
+<tr><td>1 997</td><td>CANADA</td><td>MFGR#21</td><td>20 628 385 631</td></tr>
+<tr class="odd"><td>1 997</td><td>CANADA</td><td>MFGR#22</td><td>21 051 367 486</td></tr>
+<tr><td>1 997</td><td>CANADA</td><td>MFGR#23</td><td>21 246 059 063</td></tr>
+<tr class="odd"><td>1 997</td><td>CANADA</td><td>MFGR#24</td><td>20 899 413 741</td></tr>
+<tr><td>1 997</td><td>CANADA</td><td>MFGR#25</td><td>20 371 722 143</td></tr>
+<tr class="odd"><td>1 997</td><td>PERU</td><td>MFGR#11</td><td>20 123 262 396</td></tr>
+<tr><td>1 997</td><td>PERU</td><td>MFGR#12</td><td>20 435 195 199</td></tr>
+<tr class="odd"><td>1 997</td><td>PERU</td><td>MFGR#13</td><td>20 644 146 457</td></tr>
+<tr><td>1 997</td><td>PERU</td><td>MFGR#14</td><td>20 792 194 518</td></tr>
+<tr class="odd"><td>1 997</td><td>PERU</td><td>MFGR#15</td><td>20 257 979 054</td></tr>
+<tr><td>1 997</td><td>PERU</td><td>MFGR#21</td><td>20 161 248 985</td></tr>
+<tr class="odd"><td>1 997</td><td>PERU</td><td>MFGR#22</td><td>20 485 090 615</td></tr>
+<tr><td>1 997</td><td>PERU</td><td>MFGR#23</td><td>20 348 873 210</td></tr>
+<tr class="odd"><td>1 997</td><td>PERU</td><td>MFGR#24</td><td>20 678 352 774</td></tr>
+<tr><td>1 997</td><td>PERU</td><td>MFGR#25</td><td>20 765 819 746</td></tr>
+<tr class="odd"><td>1 997</td><td>UNITED STATES</td><td>MFGR#11</td><td>20 724 850 604</td></tr>
+<tr><td>1 997</td><td>UNITED STATES</td><td>MFGR#12</td><td>20 017 511 699</td></tr>
+<tr class="odd"><td>1 997</td><td>UNITED STATES</td><td>MFGR#13</td><td>21 016 131 045</td></tr>
+<tr><td>1 997</td><td>UNITED STATES</td><td>MFGR#14</td><td>20 014 491 295</td></tr>
+<tr class="odd"><td>1 997</td><td>UNITED STATES</td><td>MFGR#15</td><td>20 196 560 991</td></tr>
+<tr><td>1 997</td><td>UNITED STATES</td><td>MFGR#21</td><td>20 531 748 627</td></tr>
+<tr class="odd"><td>1 997</td><td>UNITED STATES</td><td>MFGR#22</td><td>20 882 575 322</td></tr>
+<tr><td>1 997</td><td>UNITED STATES</td><td>MFGR#23</td><td>21 070 136 590</td></tr>
+<tr class="odd"><td>1 997</td><td>UNITED STATES</td><td>MFGR#24</td><td>20 257 501 400</td></tr>
+<tr><td>1 997</td><td>UNITED STATES</td><td>MFGR#25</td><td>20 251 954 880</td></tr>
+<tr class="odd"><td>1 998</td><td>ARGENTINA</td><td>MFGR#11</td><td>12 288 150 848</td></tr>
+<tr><td>1 998</td><td>ARGENTINA</td><td>MFGR#12</td><td>12 150 903 556</td></tr>
+<tr class="odd"><td>1 998</td><td>ARGENTINA</td><td>MFGR#13</td><td>12 253 619 754</td></tr>
+<tr><td>1 998</td><td>ARGENTINA</td><td>MFGR#14</td><td>11 761 221 854</td></tr>
+<tr class="odd"><td>1 998</td><td>ARGENTINA</td><td>MFGR#15</td><td>12 044 241 064</td></tr>
+<tr><td>1 998</td><td>ARGENTINA</td><td>MFGR#21</td><td>12 549 693 537</td></tr>
+<tr class="odd"><td>1 998</td><td>ARGENTINA</td><td>MFGR#22</td><td>12 128 760 181</td></tr>
+<tr><td>1 998</td><td>ARGENTINA</td><td>MFGR#23</td><td>12 047 927 880</td></tr>
+<tr class="odd"><td>1 998</td><td>ARGENTINA</td><td>MFGR#24</td><td>12 335 758 706</td></tr>
+<tr><td>1 998</td><td>ARGENTINA</td><td>MFGR#25</td><td>11 979 080 219</td></tr>
+<tr class="odd"><td>1 998</td><td>BRAZIL</td><td>MFGR#11</td><td>11 647 118 611</td></tr>
+<tr><td>1 998</td><td>BRAZIL</td><td>MFGR#12</td><td>11 765 031 850</td></tr>
+<tr class="odd"><td>1 998</td><td>BRAZIL</td><td>MFGR#13</td><td>11 539 651 912</td></tr>
+<tr><td>1 998</td><td>BRAZIL</td><td>MFGR#14</td><td>11 728 424 691</td></tr>
+<tr class="odd"><td>1 998</td><td>BRAZIL</td><td>MFGR#15</td><td>12 047 145 706</td></tr>
+<tr><td>1 998</td><td>BRAZIL</td><td>MFGR#21</td><td>11 782 460 918</td></tr>
+<tr class="odd"><td>1 998</td><td>BRAZIL</td><td>MFGR#22</td><td>11 756 056 270</td></tr>
+<tr><td>1 998</td><td>BRAZIL</td><td>MFGR#23</td><td>11 547 114 917</td></tr>
+<tr class="odd"><td>1 998</td><td>BRAZIL</td><td>MFGR#24</td><td>12 102 760 874</td></tr>
+<tr><td>1 998</td><td>BRAZIL</td><td>MFGR#25</td><td>12 136 894 531</td></tr>
+<tr class="odd"><td>1 998</td><td>CANADA</td><td>MFGR#11</td><td>12 053 393 754</td></tr>
+<tr><td>1 998</td><td>CANADA</td><td>MFGR#12</td><td>12 283 529 601</td></tr>
+<tr class="odd"><td>1 998</td><td>CANADA</td><td>MFGR#13</td><td>12 468 524 366</td></tr>
+<tr><td>1 998</td><td>CANADA</td><td>MFGR#14</td><td>12 417 969 344</td></tr>
+<tr class="odd"><td>1 998</td><td>CANADA</td><td>MFGR#15</td><td>12 783 220 814</td></tr>
+<tr><td>1 998</td><td>CANADA</td><td>MFGR#21</td><td>11 846 843 793</td></tr>
+<tr class="odd"><td>1 998</td><td>CANADA</td><td>MFGR#22</td><td>12 420 965 086</td></tr>
+<tr><td>1 998</td><td>CANADA</td><td>MFGR#23</td><td>11 510 243 336</td></tr>
+<tr class="odd"><td>1 998</td><td>CANADA</td><td>MFGR#24</td><td>12 403 564 192</td></tr>
+<tr><td>1 998</td><td>CANADA</td><td>MFGR#25</td><td>12 021 045 203</td></tr>
+<tr class="odd"><td>1 998</td><td>PERU</td><td>MFGR#11</td><td>11 920 946 766</td></tr>
+<tr><td>1 998</td><td>PERU</td><td>MFGR#12</td><td>11 722 265 770</td></tr>
+<tr class="odd"><td>1 998</td><td>PERU</td><td>MFGR#13</td><td>11 830 328 247</td></tr>
+<tr><td>1 998</td><td>PERU</td><td>MFGR#14</td><td>12 277 764 929</td></tr>
+<tr class="odd"><td>1 998</td><td>PERU</td><td>MFGR#15</td><td>11 685 309 770</td></tr>
+<tr><td>1 998</td><td>PERU</td><td>MFGR#21</td><td>11 570 486 758</td></tr>
+<tr class="odd"><td>1 998</td><td>PERU</td><td>MFGR#22</td><td>12 064 845 586</td></tr>
+<tr><td>1 998</td><td>PERU</td><td>MFGR#23</td><td>12 029 816 559</td></tr>
+<tr class="odd"><td>1 998</td><td>PERU</td><td>MFGR#24</td><td>11 840 207 053</td></tr>
+<tr><td>1 998</td><td>PERU</td><td>MFGR#25</td><td>11 605 382 452</td></tr>
+<tr class="odd"><td>1 998</td><td>UNITED STATES</td><td>MFGR#11</td><td>12 111 987 890</td></tr>
+<tr><td>1 998</td><td>UNITED STATES</td><td>MFGR#12</td><td>12 153 958 363</td></tr>
+<tr class="odd"><td>1 998</td><td>UNITED STATES</td><td>MFGR#13</td><td>12 111 547 473</td></tr>
+<tr><td>1 998</td><td>UNITED STATES</td><td>MFGR#14</td><td>12 164 432 343</td></tr>
+<tr class="odd"><td>1 998</td><td>UNITED STATES</td><td>MFGR#15</td><td>12 163 317 594</td></tr>
+<tr><td>1 998</td><td>UNITED STATES</td><td>MFGR#21</td><td>11 771 585 140</td></tr>
+<tr class="odd"><td>1 998</td><td>UNITED STATES</td><td>MFGR#22</td><td>12 426 045 879</td></tr>
+<tr><td>1 998</td><td>UNITED STATES</td><td>MFGR#23</td><td>12 062 197 640</td></tr>
+<tr class="odd"><td>1 998</td><td>UNITED STATES</td><td>MFGR#24</td><td>11 953 726 571</td></tr>
+<tr><td>1 998</td><td>UNITED STATES</td><td>MFGR#25</td><td>12 263 410 706</td></tr>
+</table></body></html>

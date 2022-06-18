@@ -1,0 +1,103 @@
+version: 2
+
+sources:
+  - name: dbt
+
+    tables:
+      - name: customer
+        identifier: src_customer
+        columns:
+          - name: 'C_CUSTKEY'
+            description: ""
+          - name: C_NAME
+            description: ""
+          - name: C_ADDRESS
+            description: ""
+          - name: C_CITY
+            description: ""
+          - name: C_NATION
+            description: ""
+          - name: C_REGION
+            description: ""
+          - name: C_PHONE
+            description: ""
+          - name: C_MKTSEGMENT
+            description: ""
+
+      - name: lineorder
+        identifier: src_lineorder
+        columns:
+          - name: lo_orderkey
+            description: ""
+          - name: lo_linenumber
+            description: ""
+          - name: lo_custkey
+            description: ""
+          - name: lo_partkey
+            description: ""
+          - name: lo_suppkey
+            description: ""
+          - name: lo_orderdate
+            description: ""
+          - name: lo_orderpriority
+            description: ""
+          - name: lo_shippriority
+            description: ""
+          - name: lo_quantity
+            description: ""
+          - name: lo_extendedprice
+            description: ""
+          - name: lo_ordtotalprice
+            description: ""
+          - name: lo_discount
+            description: ""
+          - name: lo_revenue
+            description: ""
+          - name: lo_supplycost
+            description: ""
+          - name: lo_tax
+            description: ""
+          - name: lo_commitdate
+            description: ""
+          - name: lo_shipmode
+            description: ""
+
+      - name: part
+        identifier: src_part
+        columns:
+          - name: p_partkey
+            description: ""
+          - name: p_name
+            description: ""
+          - name: p_mfgr
+            description: ""
+          - name: p_category
+            description: ""
+          - name: p_brand
+            description: ""
+          - name: p_color
+            description: ""
+          - name: p_type
+            description: ""
+          - name: p_size
+            description: ""
+          - name: p_container
+            description: ""
+
+      - name: supplier
+        identifier: src_supplier
+        columns:
+          - name: s_suppkey
+            description: ""
+          - name: s_name
+            description: ""
+          - name: s_address
+            description: ""
+          - name: s_city
+            description: ""
+          - name: s_nation
+            description: ""
+          - name: s_region
+            description: ""
+          - name: s_phone
+            description: ""
